@@ -24,9 +24,9 @@ export const VideoJS = (props) => {
 	      });
 	  // 当props发生变化时，可以对已经存在的player实例作一些操作，如：
 	  } else {
-	     // const player = playerRef.current;
+	     const player = playerRef.current;
 	     // player.autoplay(options.autoplay);
-	     // player.src(options.sources);
+	     player.src(options.sources);
 	  }
   }, [options, videoRef]);
 

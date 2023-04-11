@@ -7,11 +7,15 @@ class LoginStore {
     // 响应式
     makeAutoObservable(this);
   }
-  getToken = async ({ mobile, code }) => {
+  getToken = async ({ userName, password }) => {
     // 调用登录接口
-    const res = await http.post("http://geek.itheima.net/v1_0/authorizations", {
-      mobile,
-      code,
+    // const res = await http.post("http://geek.itheima.net/v1_0/authorizations", {
+    //   mobile,
+    //   code,
+    // });
+    const res = await http.post("/user/login", {
+      userName,
+      password,
     });
     // 存入token
     this.token = res.data;

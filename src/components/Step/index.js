@@ -2,9 +2,9 @@ import { Card, Button } from "antd";
 import "./index.scss";
 import { http } from "@/utils";
 function Step(props) {
-  const judge = () => {
-    const res = http.get("/apparatus");
-  };
+  // const judge = () => {
+  //   const res = http.get("/apparatus");
+  // };
   return (
     <>
       <div className="step-box">
@@ -16,15 +16,18 @@ function Step(props) {
           <br />
           步骤{props.number}：{}
           <br />
-          应操作：{props.need_procedure}
+          <div>
+          应操作：{props.should}
+          </div>
           <br />
-          实操作：{props.actual_procedure}
+          实操作：{props.actual}
           <br />
           判定时间：{}
+          {/* 会换行吗会换行吗会换行吗会换行吗会换行吗会换行吗会换行吗会换行吗会换行吗会换行吗会换行吗会换行吗会换行吗 */}
           <br />
           仪器名？：{}
           <br />
-          <Button
+          {/* <Button
             htmlType="button"
             style={{
               margin: "0 8px",
@@ -32,7 +35,7 @@ function Step(props) {
             onClick={() => judge()}
           >
             判断
-          </Button>
+          </Button> */}
         {/* </Card> */}
       </div>
     </>

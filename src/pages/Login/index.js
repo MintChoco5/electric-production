@@ -4,19 +4,20 @@ import "./index.scss";
 import { useStore } from "@/store";
 import { useNavigate } from "react-router-dom";
 function Login() {
-  const { loginStore } = useStore();
+  const { userStore, loginStore } = useStore();
   const navigate = useNavigate();
   const onFinish = async (values) => {
-    console.log(values);
+    console.log("登录的values",values);
     try{
       await loginStore.getToken({
-        mobile: values.username,
-        code: values.password,
+        userName: values.userName,
+        password: values.password,
       });
       //跳转首页
       navigate("/", { replace: true });
       // 提示用户
       message.success("登录成功");
+      userStore.setUserInfo(values.userName);
     }catch(e){
       message.error(e.response?.data?.message || '登录失败')
     }
@@ -32,11 +33,11 @@ function Login() {
           onFinish={onFinish}
         >
           <Form.Item
-            name="username"
+            name="userName"
             rules={[
               {
                 required: true,
-                message: "Please input your username!",
+                message: "用户名不能为空！",
                 validateTrigger: "onBlur",
               },
             ]}
@@ -45,9 +46,9 @@ function Login() {
           </Form.Item>
           <Form.Item
             name="password"
-            rules={[{ required: true, message: "Please input your password!" }]}
+            rules={[{ required: true, message: "密码不能为空！" }]}
           >
-            <Input size="large" placeholder="请输入密码" />
+            <Input.Password size="large" placeholder="请输入密码" />
           </Form.Item>
           <Form.Item name="remember" valuePropName="checked">
             <Checkbox className="login-checkbox-label">

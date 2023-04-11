@@ -2,6 +2,77 @@
   height: 100vh;
   text-align: left;
 }
+/* // 设置菜单样式 */
+/* .ant-menu,.ant-menu-sub,.ant-menu-inline{
+  color: white;
+  background-color: #044d50 !important;
+} */
+
+/* // 设置子菜单展开样式 */
+/* .ant-menu-submenu > .ant-menu {
+  background-color: rgb(16, 71, 83) !important;
+}
+.ant-menu-submenu-title{
+  color: white !important;
+} */
+/* // 去掉右边框 */
+/* .ant-menu-inline {
+  border: none;
+  margin: 0px;
+} */
+/* // 设置 a 链接样式 */
+/* .ant-menu-item a {
+  color: white !important;
+}
+.ant-menu-item a:hover {
+  color: #044d50 !important;
+}
+.ant-menu-item a:active:before {
+  color: #044d50 !important;
+}
+.ant-menu-item a:active:after {
+  color: #044d50 !important;
+} */
+/* // 下拉箭头样式 */
+/* .ant-menu-submenu-arrow {
+  color: white !important;
+} */
+
+/* // 菜单收缩样式 */
+/* .ant-menu.ant-menu-inline-collapsed {
+  width: 60px;
+} */
+/* // 设置收缩后的右边框 */
+/* .ant-menu-inline, .ant-menu-vertical, .ant-menu-vertical-left {
+  border-right: none;
+} */
+/* // 气泡框样式 */
+/* .ant-tooltip-inner,.ant-tooltip-arrow-content{
+  background-color: rgb(16, 71, 83) !important;
+}
+.ant-tooltip-inner a {
+  color: white !important;
+} */
+/* // 收缩的样式 */
+/* .ant-layout-sider-trigger {
+  background-color: rgb(4, 77, 100) !important;
+} */
+/* // sider 的背景色 */
+.ant-layout-header {
+  background-color: #002329 !important;
+}
+
+/* // 选中菜单状态 */
+/* .ant-menu-item-selected {
+  background-color: rgb(4,77,92) !important;
+  color: white !important;
+} */
+/* // 设置未选中菜单项鼠标滑过样式 */
+/* .ant-menu-item-active {
+  background-color: #fff !important;
+  color: #666666 !important;
+} */
+
 /* 
 .App-logo {
   height: 40vmin;

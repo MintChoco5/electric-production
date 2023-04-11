@@ -2,5 +2,10 @@
 //     flex-direction: row;
 // }
 .step-box{
+    display: table-cell;
     margin-right: 15px;
+    width: 270px;
+    height: 300px;
+    white-space:normal; word-break:break-all;
+    overflow:hidden;
 }
