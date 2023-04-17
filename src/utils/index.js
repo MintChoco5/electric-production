@@ -3,10 +3,12 @@
 import { http } from './http'
 import { algorithm } from './algorithm'
 import { setToken,getToken,removeToken } from './token'
+import { setUser,getUser,removeUser } from './userinfo'
 
 export{
     http,
     algorithm,
     setToken,getToken,removeToken,
+    setUser,getUser,removeUser
 }
 //import {http} from '@/utils'

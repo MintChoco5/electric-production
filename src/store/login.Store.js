@@ -1,6 +1,7 @@
 // login module
 import { makeAutoObservable } from "mobx";
 import { http, setToken, getToken, removeToken } from "@/utils";
+import { removeUser, setUser } from "@/utils/userinfo";
 class LoginStore {
   token = getToken() || "";
   constructor() {
@@ -21,11 +22,13 @@ class LoginStore {
     this.token = res.data;
     // 存入ls
     setToken(this.token);
+    setUser(userName);
   };
   // 退出登录
   logOut = () => {
     this.token = "";
     removeToken();
+    removeUser();
   };
 }
 

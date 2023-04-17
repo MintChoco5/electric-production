@@ -13,6 +13,7 @@ function Login() {
         userName: values.userName,
         password: values.password,
       });
+      await userStore.getUserInfo(values.userName);
       //跳转首页
       navigate("/", { replace: true });
       // 提示用户

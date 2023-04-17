@@ -5,8 +5,7 @@ import { getToken } from './token'
 import {history} from './history'
 
 const http = axios.create({
-  baseURL: 'http://localhost:8081',
-  // baseURL: 'http://150.158.6.62:8081',
+  baseURL: "/api/",
   timeout: 5000
 })
 // 添加请求拦截器

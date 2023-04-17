@@ -1,7 +1,7 @@
 import { makeAutoObservable } from "mobx";
-import { http } from "@/utils";
+import { getUser } from "@/utils";
 class UserStore {
-  userInfo = "";
+  userInfo = getUser()||"";
   constructor() {
     makeAutoObservable(this);
   }
